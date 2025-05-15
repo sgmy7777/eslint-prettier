@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "pnpm run lint:backend && pnpm run lint:frontend",
+    "type-check": "cd backend && tsc --noEmit",
     "lint:backend": "eslint backend --ext .ts",
     "lint:frontend": "eslint frontend/js --config frontend/eslint.config.js",
     "format": "prettier . --write",
@@ -15,7 +16,7 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix --max-warnings=0",
       "prettier --write --loglevel warn",
-      "tsc --noEmit -p backend/tsconfig.json"
+      "npm run type-check --if-present"
     ],
     "*.{html,css,json,md}": [
       "prettier --write --loglevel warn"
