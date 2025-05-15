@@ -6,6 +6,7 @@ type Message = {
   username: string;
   text: string;
   timestamp: string;
+  index: number;
 };
 
 const server = express();
