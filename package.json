@@ -1,0 +1,26 @@
+{
+  "name": "eslint",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "pnpm run lint:backend && pnpm run lint:frontend",
+    "lint:backend": "eslint backend --ext .ts",
+    "lint:frontend": "eslint frontend/js --config frontend/eslint.config.js",
+    "format": "prettier . --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.1",
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "eslint": "9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.1.0",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.32.1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2021", // Современный вывод
+    "module": "ESNext", // Используем ES-модули
+    "moduleResolution": "node", // Для поиска модулей как в Node.js
+    "outDir": "./dist", // Куда будет компилироваться код
+    "rootDir": "./src", // Откуда берется исходный код
+    "strict": true, // Включает все строгие проверки типов
+    "esModuleInterop": true, // Для импортов CommonJS модулей
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true, // Если нужно импортировать .json
+    "sourceMap": true, // Для отладки
+    "noFallthroughCasesInSwitch": true // Безопасность для switch-case
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
