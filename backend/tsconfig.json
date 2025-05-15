@@ -8,6 +8,7 @@
     "strict": true, // Включает все строгие проверки типов
     "esModuleInterop": true, // Для импортов CommonJS модулей
     "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
     "skipLibCheck": true,
     "resolveJsonModule": true, // Если нужно импортировать .json
     "sourceMap": true, // Для отладки
