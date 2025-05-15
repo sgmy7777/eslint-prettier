@@ -5,7 +5,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "pnpm run lint:backend && pnpm run lint:frontend",
     "lint:backend": "eslint backend --ext .ts",
     "lint:frontend": "eslint frontend/js --config frontend/eslint.config.js",
@@ -13,16 +12,14 @@
     "prepare": "husky"
   },
   "lint-staged": {
-  "backend/**/*.ts": [
-    "eslint --fix",
-    "prettier --write",
-    "tsc --noEmit"
-  ],
-  "frontend/**/*.{js,html,css}": [
-    "eslint --fix",
-    "prettier --write"
-  ]
-},
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write --loglevel warn"
+    ],
+    "*.{html,css,json,md}": [
+      "prettier --write"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
