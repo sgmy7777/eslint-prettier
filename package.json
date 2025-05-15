@@ -13,15 +13,16 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --max-warnings=0",
-      "prettier --write --loglevel warn",
-      "npm run type-check --if-present"
-    ],
-    "*.{html,css,json,md}": [
-      "prettier --write --loglevel warn"
-    ]
-  },
+  "backend/**/*.ts": [
+    "eslint --fix --max-warnings=0",
+    "prettier --write --loglevel warn",
+    "bash -c 'npx tsc --noEmit --strict --pretty false --skipLibCheck -p backend/tsconfig.json'"
+  ],
+  "frontend/**/*.js": [
+    "eslint --fix --max-warnings=0 --config frontend/eslint.config.js",
+    "prettier --write --loglevel warn"
+  ]
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
