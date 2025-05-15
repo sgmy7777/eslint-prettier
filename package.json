@@ -14,7 +14,8 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix --max-warnings=0",
-      "prettier --write --loglevel warn"
+      "prettier --write --loglevel warn",
+      "tsc --noEmit -p backend/tsconfig.json"
     ],
     "*.{html,css,json,md}": [
       "prettier --write --loglevel warn"
