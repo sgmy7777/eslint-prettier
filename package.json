@@ -13,14 +13,14 @@
     "prepare": "husky"
   },
   "lint-staged": {
-  "backend/**/*.ts": [
+  "backend/src/**/*.ts": [
     "eslint --fix --max-warnings=0",
-    "prettier --write --loglevel warn",
-    "bash -c 'npx tsc --noEmit --strict --pretty false --skipLibCheck -p backend/tsconfig.json'"
+    "prettier --write",
+    "bash -c 'cd backend && tsc --noEmit --strict' || exit 1"
   ],
-  "frontend/**/*.js": [
+  "frontend/js/**/*.js": [
     "eslint --fix --max-warnings=0 --config frontend/eslint.config.js",
-    "prettier --write --loglevel warn"
+    "prettier --write"
   ]
 },
   "keywords": [],
