@@ -1,0 +1,8 @@
+{
+  "entryPoints": ["./backend/src/index.ts"],
+  "out": "./docs",
+  "exclude": ["**/node_modules/**", "**/dist/**"],
+  "theme": "default",
+  "includeVersion": true,
+  "excludeExternals": true
+}

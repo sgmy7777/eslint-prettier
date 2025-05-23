@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "commonjs",
+    "target": "ES2017",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "./"
+  },
+  "include": ["backend/src/**/*"],
+  "exclude": ["node_modules"]
+}
